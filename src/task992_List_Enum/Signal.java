@@ -1,4 +1,4 @@
-package task992_ENUM_TwoClasses_Calculator_Handshakes;
+package task992_List_Enum;
 
 enum Signal {
 
