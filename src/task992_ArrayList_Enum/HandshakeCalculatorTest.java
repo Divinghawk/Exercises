@@ -23,4 +23,6 @@ class HandshakeCalculatorTest {
 //	public void testThatHandlesMoreThanFiveBinaryPlacesWithoutReversal() {
 //	    assertThat(handshakeCalculator.calculateHandshake(35)).containsExactly(Signal.WINK, Signal.DOUBLE_BLINK);
 //	}
+	
+//
 }
