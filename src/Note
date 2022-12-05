@@ -1,0 +1,21 @@
+Eine Klasse kann wie folgt beginnen:
+
+ x	class Beispiel {
+	}
+
+x:
+nichts davor schreiben - class kann nur im eigenen package verwendet werden	
+private - Only the current class will have access to the field or method.
+protected - Only the current class and subclasses (and sometimes also same-package classes) of this class will have access to the field or method.
+public - Any class can refer to the field or call the method.
+
+
+private - least access, best encapsulation
+protected - some access, moderate encapsulation
+public - full access, no encapsulation
+
+int ist ein nativer Datentyp der offen ist
+Integer ist umschlossen durch das Objekt 
+Der Vergleich zwischen diesen beiden Datentypen ist nur durch das auf eine Ebene bringen möglich.
+Beispiel:
+int == (int) Integer

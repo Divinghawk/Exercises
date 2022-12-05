@@ -1,0 +1,55 @@
+package task9993_DoubleLinkedList;
+
+//A Doubly Linked List (DLL) contains an extra pointer, typically called the previous pointer,
+//together with the next pointer and data which are there in the singly linked list.
+
+class DoubleLinkedList<T> {
+    private Element<T> head;
+    private Element<T> tail;
+    
+    void push(T value) {
+       if(head == null){
+          head = tail = new Element<>(value, null, null);
+       }else{
+           Element<T> newElement = new Element<>(value, tail, null); 
+           tail.next = newElement;
+           tail = newElement;
+       }
+    }
+    T pop() {
+        T value = tail.value; 
+        tail = tail.prev; 
+        if(tail != null){
+            tail.next = null; 
+        }
+        return value; 
+    }
+    void unshift(T value) {
+        if(head == null){
+            head = tail = new Element<>(value, null, null); 
+        }else{
+            Element<T> newElement = new Element<>(value, null, head); 
+            head.prev = newElement; 
+            head = newElement; 
+        }
+    }
+    T shift() {
+        T value = head.value; 
+        head = head.next; 
+        if(head != null){
+            head.prev = null; 
+        }
+        return value; 
+        
+    }
+    private static final class Element<T> {
+        private final T value;
+        private Element<T> prev;
+        private Element<T> next;
+        Element(T value, Element<T> prev, Element<T> next) {
+            this.value = value; 
+            this.prev = prev; 
+            this.next = next; 
+        }
+    }
+}

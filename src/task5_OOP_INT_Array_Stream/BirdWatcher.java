@@ -2,7 +2,7 @@ package task5_OOP_INT_Array_Stream;
 
 import java.util.Arrays;
 
-public class BirdWatcher {
+class BirdWatcher {
 
     private final int[] birdsPerDay;
 
